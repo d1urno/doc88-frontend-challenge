@@ -16,7 +16,7 @@
       class="absolute inset-0 object-cover object-bottom w-full lg:object-fill"
     >
     <!-- End: Background red wave -->
-    <header class="container flex mt-10 mb-6 2xl:mt-16">
+    <header class="container relative flex mt-10 mb-6 2xl:mt-16">
       <div class="relative max-w-xs mx-auto sm:max-w-sm lg:max-w-xl 2xl:max-w-full">
         <!-- Logo -->
         <img
@@ -39,6 +39,16 @@
         >
         <!-- End: Absolute image -->
       </div>
+      <!-- Parallax image -->
+      <img
+        src="../assets/pastel-parallax.png"
+        alt="Pastel - Pastel de ideias"
+        class="absolute inset-0 z-10 hidden
+        lg:block lg:-mt-12 lg:-ml-48 lg:max-w-md
+        xl:-ml-24
+        2xl:-mt-16 2xl:-ml-48 2xl:max-w-full"
+      >
+      <!-- End: Parallax image -->
     </header>
     <div class="container mb-32">
       <home-form />
