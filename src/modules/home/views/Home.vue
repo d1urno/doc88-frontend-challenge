@@ -19,13 +19,19 @@
         alt="Logo - Pastel de ideias"
       >
     </header>
+    <div class="container mb-32">
+      <home-form />
+    </div>
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import HomeForm from '@/modules/home/components/HomeForm.vue'
 
-@Component
+@Component({
+  components: { HomeForm }
+})
 export default class Home extends Vue {}
 </script>
 
