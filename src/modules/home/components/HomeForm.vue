@@ -1,15 +1,15 @@
 <template>
   <form
     action="/"
-    class="relative w-full max-w-6xl pb-12 mx-auto bg-white rounded-lg shadow-xl"
+    class="relative w-full max-w-4xl pb-32 mx-auto bg-white rounded-lg shadow-xl sm:pb-12 2xl:max-w-6xl"
   >
-    <header class="flex items-center justify-between p-5 pb-10 bg-yellow-500 rounded-t-lg">
-      <h2 class="pl-12 text-2xl italic font-bold text-red-900">
+    <header class="items-center justify-between p-5 pb-10 text-center bg-yellow-500 rounded-t-lg lg:flex lg:text-left">
+      <h2 class="text-xl italic font-bold text-red-900 md:text-2xl lg:pl-12">
         Monte aqui o seu cardápio. O que está esperando?
       </h2>
       <!-- Checkbox -->
       <!-- TODO: Create checkbox component -->
-      <div class="flex items-center">
+      <div class="flex items-center justify-center mt-5 lg:justify-start lg:mt-0">
         <span class="text-red-900">Comida</span>
         <div class="relative mx-3">
           <div class="w-10 h-3 bg-white rounded-full shadow-inner" />
@@ -22,7 +22,7 @@
       <!-- End: Checkbox -->
     </header>
     <!-- First row -->
-    <div class="flex pr-5 -mt-5 space-x-5">
+    <div class="px-5 -mt-10 space-y-5 lg:flex lg:pr-5 lg:pl-0 lg:space-y-0 lg:-mt-5 lg:space-x-5">
       <label
         class="sr-only"
         for="title"
@@ -81,7 +81,7 @@
           aria-hidden="true"
           class="w-12 mb-2"
         >
-        <p class="text-red-900">
+        <p class="text-center text-red-900">
           Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar
           a pasta.
         </p>
@@ -94,12 +94,12 @@
       <input
         type="reset"
         value="LIMPAR"
-        class="w-48 py-4 mx-5 text-xl font-black text-white bg-red-600 rounded-full"
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full sm:mx-5 sm:inline"
       >
       <input
         type="submit"
         value="CADASTRAR"
-        class="w-48 py-4 mx-5 text-xl font-black text-red-900 bg-yellow-500 rounded-full"
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-900 bg-yellow-500 rounded-full sm:mx-5 sm:inline"
       >
     </div>
     <!-- End: Buttons -->
