@@ -1,17 +1,21 @@
 <template>
   <main class="flex flex-col items-center justify-start min-h-screen">
+    <!-- Background white gradient -->
     <span
       id="gradient"
       class="absolute inset-0"
     />
+    <!-- End: Background white gradient -->
+    <!-- Background red wave -->
     <img
       id="wave"
-      class="absolute inset-0 object-cover object-bottom w-full lg:object-fill"
+      alt=""
       src="../assets/wave.svg"
       draggable="false"
       aria-hidden="true"
-      alt=""
+      class="absolute inset-0 object-cover object-bottom w-full lg:object-fill"
     >
+    <!-- End: Background red wave -->
     <header class="container flex mt-10 mb-6 2xl:mt-16">
       <div class="relative max-w-xs mx-auto sm:max-w-sm lg:max-w-xl 2xl:max-w-full">
         <!-- Logo -->
