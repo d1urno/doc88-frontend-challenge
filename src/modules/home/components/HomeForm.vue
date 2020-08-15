@@ -4,20 +4,20 @@
     class="relative w-full max-w-4xl pb-32 mx-auto bg-white rounded-lg shadow-xl sm:pb-12 2xl:max-w-6xl"
   >
     <header class="items-center justify-between p-5 pb-10 text-center bg-yellow-500 rounded-t-lg lg:flex lg:text-left">
-      <h2 class="text-xl italic font-bold text-red-900 md:text-2xl lg:pl-12">
+      <h2 class="text-xl italic font-bold text-red-800 md:text-2xl lg:pl-12">
         Monte aqui o seu cardápio. O que está esperando?
       </h2>
       <!-- Checkbox -->
       <!-- TODO: Create checkbox component -->
       <div class="flex items-center justify-center mt-5 lg:justify-start lg:mt-0">
-        <span class="text-red-900">Comida</span>
+        <span class="text-red-800">Comida</span>
         <div class="relative mx-3">
           <div class="w-10 h-3 bg-white rounded-full shadow-inner" />
           <div
             class="absolute inset-y-0 left-0 w-5 h-5 -mt-1 bg-red-600 rounded-full"
           />
         </div>
-        <span class="text-red-900">Bebida</span>
+        <span class="text-red-800">Bebida</span>
       </div>
       <!-- End: Checkbox -->
     </header>
@@ -31,7 +31,7 @@
         id="title"
         type="text"
         placeholder="Título do pedido"
-        class="w-full px-4 py-2 placeholder-red-900 border border-red-500 rounded-lg"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
       >
       <label
         class="sr-only"
@@ -41,7 +41,7 @@
         id="flavor"
         type="text"
         placeholder="Sabor"
-        class="w-full px-4 py-2 placeholder-red-900 border border-red-500 rounded-lg"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
       >
       <label
         class="sr-only"
@@ -51,7 +51,7 @@
         id="price"
         type="text"
         placeholder="R$"
-        class="w-48 px-4 py-2 placeholder-red-900 border border-red-500 rounded-lg"
+        class="w-48 px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
       >
     </div>
     <!-- End: First row -->
@@ -65,7 +65,7 @@
         id="description"
         placeholder="Descrição"
         rows="3"
-        class="w-full px-4 py-2 placeholder-red-900 border border-red-500 rounded-lg resize-none"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg resize-none"
       />
     </div>
     <!-- End: Second row -->
@@ -73,7 +73,7 @@
     <!-- TODO: Create drag and drop component -->
     <div class="px-5 mt-5">
       <div
-        class="flex flex-col items-center justify-center w-full p-5 border border-red-500 rounded-lg"
+        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-lg"
       >
         <img
           src="../assets/upload-icon.svg"
@@ -81,7 +81,7 @@
           aria-hidden="true"
           class="w-12 mb-2"
         >
-        <p class="text-center text-red-900">
+        <p class="text-center text-red-800">
           Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar
           a pasta.
         </p>
@@ -99,7 +99,7 @@
       <input
         type="submit"
         value="CADASTRAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-900 bg-yellow-500 rounded-full sm:mx-5 sm:inline"
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full sm:mx-5 sm:inline"
       >
     </div>
     <!-- End: Buttons -->
