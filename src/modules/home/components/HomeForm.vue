@@ -31,7 +31,7 @@
         id="title"
         type="text"
         placeholder="Título do pedido"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
       >
       <label
         class="sr-only"
@@ -41,7 +41,7 @@
         id="flavor"
         type="text"
         placeholder="Sabor"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
       >
       <label
         class="sr-only"
@@ -51,7 +51,7 @@
         id="price"
         type="text"
         placeholder="R$"
-        class="w-48 px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg"
+        class="w-48 px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
       >
     </div>
     <!-- End: First row -->
@@ -65,7 +65,7 @@
         id="description"
         placeholder="Descrição"
         rows="3"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-lg resize-none"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none"
       />
     </div>
     <!-- End: Second row -->
@@ -73,7 +73,7 @@
     <!-- TODO: Create drag and drop component -->
     <div class="px-5 mt-5">
       <div
-        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-lg"
+        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-md"
       >
         <img
           src="../assets/upload-icon.svg"
