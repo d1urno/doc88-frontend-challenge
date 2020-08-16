@@ -1,3 +1,9 @@
-export interface HomeState {}
+import { Item } from 'vue-modules'
 
-export const initialState: HomeState = {}
+export interface HomeState {
+  items: Item[]
+}
+
+export const initialState: HomeState = {
+  items: []
+}
