@@ -44,8 +44,17 @@
       />
       <!-- End: Parallax image -->
     </header>
-    <div class="container mb-32">
+    <div class="container mb-24">
       <home-form />
+    </div>
+    <div class="relative flex items-center w-full mb-16">
+      <span class="flex-1 inline-block h-1 border-t border-red-600" />
+      <p
+        class="flex-shrink-0 px-6 text-xl italic font-bold text-center text-red-800 sm:px-12 md:text-2xl"
+      >
+        Veja como será <br class="sm:hidden" />apresentado ao cliente
+      </p>
+      <span class="flex-1 inline-block h-1 border-t border-red-600" />
     </div>
   </main>
 </template>
