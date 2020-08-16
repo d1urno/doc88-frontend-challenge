@@ -35,7 +35,7 @@
         id="title"
         type="text"
         placeholder="Título do pedido"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md focus:outline-none focus:shadow-outline"
+        class="z-10 w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md focus:outline-none focus:shadow-outline"
       />
       <label class="sr-only" for="flavor">Sabor</label>
       <input
@@ -60,13 +60,13 @@
         id="description"
         placeholder="Descrição"
         rows="3"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none focus:outline-none focus:shadow-outline"
+        class="z-10 w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none focus:outline-none focus:shadow-outline"
       />
     </div>
     <!-- End: Second row -->
     <!-- Third row -->
     <!-- TODO: Create drag and drop component -->
-    <div class="px-5 mt-5">
+    <div class="z-10 px-5 mt-5">
       <div
         class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-md"
       >
