@@ -251,6 +251,20 @@ export default class HomeForm extends Vue {
   scroll-padding: 9rem;
 }
 
+/********************************
+  Remove arrows on number inputs
+*********************************/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 /* purgecss start ignore */
 .zoom-fade-enter,
 .zoom-fade-leave-to {
