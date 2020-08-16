@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center mt-5 lg:justify-start lg:mt-0">
+  <div class="flex items-center justify-center lg:justify-start">
     <label for="toggle" class="flex items-center cursor-pointer">
       <span class="text-red-800">Comida</span>
       <span class="relative mx-3">
