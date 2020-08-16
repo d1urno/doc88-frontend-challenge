@@ -6,4 +6,12 @@ declare module 'vue-modules' {
     install(Vue: typeof _Vue): void;
     install(Vue: typeof _Vue, options: T): void;
   }
+
+  export interface Item {
+    id: number
+    title: string
+    flavor: string
+    price: number
+    description: string
+  }
 }
