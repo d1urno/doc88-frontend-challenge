@@ -51,7 +51,7 @@
         id="price"
         type="text"
         placeholder="R$"
-        class="w-48 px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
+        class="w-40 px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
       >
     </div>
     <!-- End: First row -->
