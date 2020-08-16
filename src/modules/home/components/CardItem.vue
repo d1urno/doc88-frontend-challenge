@@ -1,20 +1,30 @@
 <template>
-  <li class="relative flex max-w-6xl mx-auto mb-16 c-item">
+  <li class="relative max-w-4xl mx-auto mb-16 lg:flex 2xl:max-w-6xl c-item">
+    <!-- prettier-ignore -->
     <img
       src="../assets/pasteis-placeholder-img.png"
       :alt="item.title + '- Pastel de ideias'"
-      class="z-10 mb-auto -mt-3 -ml-8 -mr-2"
+      class="relative z-10 mx-auto -mt-3 -mb-40
+      lg:mb-auto lg:-ml-8 lg:-mr-2"
     />
-    <div class="relative w-full mb-auto -ml-24 rounded-lg shadow-xl">
+    <div class="relative w-full rounded-lg shadow-xl lg:mb-auto lg:-ml-24">
+      <!-- prettier-ignore -->
       <header
-        class="items-center justify-between py-5 pl-8 pr-10 text-center bg-red-600 rounded-t-lg lg:flex lg:text-left"
+        class="px-8 pt-32 bg-red-600 rounded-t-lg
+        lg:items-center lg:justify-between lg:py-5 lg:pl-8 lg:pr-10 lg:flex"
       >
         <h2
-          class="text-xl italic font-bold text-yellow-500 md:text-3xl lg:pl-20"
+          class="my-3 text-xl italic font-bold text-yellow-500 text-center
+          md:text-3xl
+          lg:my-0 lg:pl-20 lg:text-left"
         >
           "{{ item.title }}"
         </h2>
-        <h2 class="text-xl italic font-bold text-white md:text-3xl">
+        <h2
+          class="pb-3 text-xl italic font-bold text-white text-right
+          md:text-3xl
+          lg:pb-0 lg:text-left"
+        >
           R${{ item.price }}
         </h2>
       </header>
