@@ -56,17 +56,30 @@
       </p>
       <span class="flex-1 inline-block h-1 border-t border-red-600" />
     </div>
+    <!-- List -->
+    <transition-group name="zoom-fade" tag="ul" class="container">
+      <card-item v-for="item in items" :key="item.id" :item="item" />
+    </transition-group>
+    <!-- End: List -->
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
+import { GET_ITEMS } from '@/modules/home/store/getters'
+import { Item } from 'vue-modules'
 import HomeForm from '@/modules/home/components/HomeForm.vue'
+import CardItem from '@/modules/home/components/CardItem.vue'
+
+const home = namespace('home')
 
 @Component({
-  components: { HomeForm }
+  components: { CardItem, HomeForm }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  @home.Getter(GET_ITEMS) items!: [Item]
+}
 </script>
 
 <style lang="scss" scoped>
@@ -103,4 +116,15 @@ main {
     height: 546px;
   }
 }
+
+.c-item {
+  @apply transition duration-700;
+  transition-timing-function: cubic-bezier(0.35, 0.46, 0.17, 1.3);
+}
+
+/*! purgecss start ignore */
+.zoom-fade-enter {
+  @apply transform scale-90 opacity-0;
+}
+/*! purgecss end ignore */
 </style>
