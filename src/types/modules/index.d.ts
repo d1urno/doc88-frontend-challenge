@@ -9,9 +9,10 @@ declare module 'vue-modules' {
 
   export interface Item {
     id: number
+    isDrink: boolean
     title: string
     flavor: string
-    price: number
+    price: string
     description: string
   }
 }
