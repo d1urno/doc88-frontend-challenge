@@ -82,7 +82,8 @@
         v-model="item.description"
         placeholder="Descrição"
         rows="3"
-        class="z-10 w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none focus:outline-none focus:shadow-outline"
+        class="z-10 w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none
+        focus:outline-none focus:shadow-outline"
       />
     </div>
     <!-- End: Second row -->
@@ -112,16 +113,18 @@
       <input
         type="button"
         value="LIMPAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full focus:outline-none focus:shadow-outline
-        sm:mx-5 sm:inline"
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full
+        sm:mx-5 sm:inline
+        focus:outline-none focus:shadow-outline"
         @click="resetForm"
       />
       <!-- prettier-ignore -->
       <input
         type="submit"
         value="CADASTRAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full focus:outline-none focus:shadow-outline
-        sm:mx-5 sm:inline"
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full
+        sm:mx-5 sm:inline
+        focus:outline-none focus:shadow-outline"
       />
     </div>
     <!-- End: Buttons -->
