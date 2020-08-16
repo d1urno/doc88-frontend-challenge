@@ -2,7 +2,7 @@
   <li class="relative flex max-w-6xl mx-auto mb-16 c-item">
     <img
       src="../assets/pasteis-placeholder-img.png"
-      alt=""
+      :alt="item.title + '- Pastel de ideias'"
       class="z-10 mb-auto -mt-3 -ml-8 -mr-2"
     />
     <div class="relative w-full mb-auto -ml-24 rounded-lg shadow-xl">
