@@ -23,7 +23,10 @@
           <span class="italic font-bold">Sabor: </span>
           {{ item.flavor }}
         </p>
-        <p class="text-xl text-red-800 md:text-2xl lg:pl-20">
+        <p
+          v-if="item.description"
+          class="text-xl text-red-800 md:text-2xl lg:pl-20"
+        >
           <span class="italic font-bold">Descrição: </span>
           {{ item.description }}
         </p>
