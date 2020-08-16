@@ -6,7 +6,7 @@
     <header
       class="items-center justify-between p-5 pb-10 text-center bg-yellow-500 rounded-t-lg lg:flex lg:text-left"
     >
-      <h2 class="text-xl italic font-bold text-red-800 md:text-2xl lg:pl-12">
+      <h2 class="text-xl italic font-bold text-red-800 md:text-2xl lg:pl-8">
         Monte aqui o seu cardápio. O que está esperando?
       </h2>
       <!-- Checkbox -->
