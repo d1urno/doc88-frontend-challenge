@@ -35,21 +35,21 @@
         id="title"
         type="text"
         placeholder="Título do pedido"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md focus:outline-none focus:shadow-outline"
       />
       <label class="sr-only" for="flavor">Sabor</label>
       <input
         id="flavor"
         type="text"
         placeholder="Sabor"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md focus:outline-none focus:shadow-outline"
       />
       <label class="sr-only" for="price">R$</label>
       <input
         id="price"
         type="text"
         placeholder="R$"
-        class="w-40 px-4 py-2 placeholder-red-800 border border-red-600 rounded-md"
+        class="w-40 px-4 py-2 placeholder-red-800 border border-red-600 rounded-md focus:outline-none focus:shadow-outline"
       />
     </div>
     <!-- End: First row -->
@@ -60,7 +60,7 @@
         id="description"
         placeholder="Descrição"
         rows="3"
-        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none"
+        class="w-full px-4 py-2 placeholder-red-800 border border-red-600 rounded-md resize-none focus:outline-none focus:shadow-outline"
       />
     </div>
     <!-- End: Second row -->
@@ -90,14 +90,14 @@
       <input
         type="reset"
         value="LIMPAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full focus:outline-none focus:shadow-outline
         sm:mx-5 sm:inline"
       />
       <!-- prettier-ignore -->
       <input
         type="submit"
         value="CADASTRAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full focus:outline-none focus:shadow-outline
         sm:mx-5 sm:inline"
       />
     </div>
