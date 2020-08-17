@@ -47,20 +47,26 @@
     <div class="container mb-24">
       <home-form />
     </div>
-    <div class="relative flex items-center w-full mb-16">
-      <span class="flex-1 inline-block h-1 border-t border-red-600" />
-      <p
-        class="flex-shrink-0 px-6 text-xl italic font-bold text-center text-red-800 sm:px-12 md:text-2xl"
-      >
-        Veja como será <br class="sm:hidden" />apresentado ao cliente
-      </p>
-      <span class="flex-1 inline-block h-1 border-t border-red-600" />
-    </div>
-    <!-- List -->
-    <transition-group name="zoom-fade" tag="ul" class="container">
-      <card-item v-for="item in items" :key="item.id" :item="item" />
-    </transition-group>
-    <!-- End: List -->
+    <transition name="slide-top">
+      <div v-if="items.length" class="w-full">
+        <!-- Divisor -->
+        <div class="relative flex items-center w-full mb-16">
+          <span class="flex-1 inline-block h-1 border-t border-red-600" />
+          <p
+            class="flex-shrink-0 px-6 text-xl italic font-bold text-center text-red-800 sm:px-12 md:text-2xl"
+          >
+            Veja como será <br class="sm:hidden" />apresentado ao cliente
+          </p>
+          <span class="flex-1 inline-block h-1 border-t border-red-600" />
+        </div>
+        <!-- End: Divisor -->
+        <!-- List -->
+        <transition-group name="zoom-fade" tag="ul" class="container">
+          <card-item v-for="item in items" :key="item.id" :item="item" />
+        </transition-group>
+        <!-- End: List -->
+      </div>
+    </transition>
   </main>
 </template>
 
@@ -125,6 +131,15 @@ main {
 /*! purgecss start ignore */
 .zoom-fade-enter {
   @apply transform scale-90 opacity-0;
+}
+.slide-top-enter,
+.slide-top-leave-to {
+  @apply transform translate-y-full opacity-0;
+}
+.slide-top-leave-active,
+.slide-top-enter-active {
+  @apply transition duration-500;
+  transition-timing-function: cubic-bezier(0.35, 0.46, 0.17, 1.3);
 }
 /*! purgecss end ignore */
 </style>
