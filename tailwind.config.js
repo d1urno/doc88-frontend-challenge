@@ -1,5 +1,12 @@
 module.exports = {
-  purge: [],
+  purge: {
+    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
+    mode: 'all',
+    content: ['src/**/*.vue'],
+    options: {
+      keyframes: true
+    }
+  },
   target: 'relaxed',
   prefix: '',
   important: false,
