@@ -16,3 +16,8 @@ declare module 'vue-modules' {
     description: string
   }
 }
+
+declare module 'vue-parallax-js' {
+  const n: any
+  export = n
+}
