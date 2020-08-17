@@ -115,7 +115,7 @@
           alt=""
           aria-hidden="true"
           draggable="false"
-          class="w-12 mb-2"
+          class="w-12 h-12 mb-2"
         />
         <p class="text-center text-red-800 select-none">
           Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar
