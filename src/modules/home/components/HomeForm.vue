@@ -18,7 +18,7 @@
     </header>
     <!-- First row -->
     <div
-      ref="wrapper"
+      id="wrapper"
       class="px-5 -mt-5 space-y-5 lg:flex lg:space-y-0 lg:space-x-5"
     >
       <div class="z-10 w-full">
@@ -157,7 +157,7 @@ import { namespace } from 'vuex-class'
 import { ADD_ITEM } from '@/modules/home/store/action-types'
 import { Item } from 'vue-modules'
 import HomeFormCheckBox from '@/modules/home/components/HomeFormCheckBox.vue'
-import smoothReflow from 'vue-smooth-reflow'
+import smoothReflow, { Options } from 'vue-smooth-reflow'
 
 const home = namespace('home')
 @Component({
@@ -262,11 +262,12 @@ export default class HomeForm extends Vue {
 
   mounted() {
     // Height transition feature
-    this.$smoothReflow({
-      el: this.$refs.wrapper!,
+    const options: Options = {
+      el: '#wrapper',
       hideOverflow: false,
       transition: 'height .25s ease-out'
-    })
+    }
+    this.$smoothReflow!(options)
   }
 }
 </script>
