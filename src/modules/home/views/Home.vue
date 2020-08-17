@@ -17,6 +17,7 @@
       >
         <!-- Logo -->
         <img
+          id="logo"
           src="../assets/logo.svg"
           alt="Logo - Pastel de ideias"
           class="mb-12 sm:mb-16 lg:mb-0 lg:pr-12 2xl:pr-40"
@@ -120,6 +121,21 @@ main {
 
   @screen 2xl {
     height: 546px;
+  }
+}
+
+#logo {
+  height: 114px;
+  @screen sm {
+    height: 137px;
+  }
+
+  @screen lg {
+    height: 188px;
+  }
+
+  @screen 2xl {
+    height: 263px;
   }
 }
 
