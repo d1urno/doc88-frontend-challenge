@@ -15,12 +15,15 @@
       <div
         class="relative max-w-xs mx-auto sm:max-w-sm lg:max-w-xl 2xl:max-w-full"
       >
-        <!-- Logo -->
+        <!-- Logo --><!-- prettier-ignore -->
         <img
           id="logo"
           src="../assets/logo.svg"
           alt="Logo - Pastel de ideias"
-          class="mb-12 sm:mb-16 lg:mb-0 lg:pr-12 2xl:pr-40"
+          class="mb-12
+          sm:mb-16
+          lg:mb-0 lg:pr-12
+          2xl:pr-40"
         />
         <!-- End: Logo -->
         <!-- Absolute image --><!-- prettier-ignore -->
