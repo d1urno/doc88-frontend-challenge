@@ -10756,6 +10756,11 @@ vue-router@^3.4.3:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.3.tgz#fa93768616ee338aa174f160ac965167fa572ffa"
   integrity sha512-BADg1mjGWX18Dpmy6bOGzGNnk7B/ZA0RxuA6qedY/YJwirMfKXIDzcccmHbQI0A6k5PzMdMloc0ElHfyOoX35A==
 
+vue-smooth-reflow@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/vue-smooth-reflow/-/vue-smooth-reflow-0.1.12.tgz#bca66e7cecc7ab1f683ebb02e1d9b75a2ab4db98"
+  integrity sha512-cic+dmqsBzu/lRMXf/mhUPMM0g0vancJGUyNMMGHjis0ilSFd1RjIrZYcU5B7ef+n5oshH33/zbMA8OYyRTu7Q==
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

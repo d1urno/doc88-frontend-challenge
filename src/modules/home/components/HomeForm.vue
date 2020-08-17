@@ -17,7 +17,10 @@
       <home-form-check-box v-model="item.isDrink" :value="item.isDrink" />
     </header>
     <!-- First row -->
-    <div class="px-5 -mt-5 space-y-5 lg:flex lg:space-y-0 lg:space-x-5">
+    <div
+      ref="wrapper"
+      class="px-5 -mt-5 space-y-5 lg:flex lg:space-y-0 lg:space-x-5"
+    >
       <div class="z-10 w-full">
         <label class="sr-only" for="title">Título do pedido</label>
         <!-- prettier-ignore -->
@@ -32,7 +35,10 @@
           @input="errors.title = ''"
         />
         <transition name="zoom-fade">
-          <p v-if="errors.title" class="mt-1 text-xs italic text-red-600">
+          <p
+            v-show="errors.title"
+            class="inline-block mt-1 text-xs italic text-red-600"
+          >
             {{ errors.title }}
           </p>
         </transition>
@@ -51,7 +57,10 @@
           @input="errors.flavor = ''"
         />
         <transition name="zoom-fade">
-          <p v-if="errors.flavor" class="mt-1 text-xs italic text-red-600">
+          <p
+            v-show="errors.flavor"
+            class="inline-block mt-1 text-xs italic text-red-600"
+          >
             {{ errors.flavor }}
           </p>
         </transition>
@@ -71,7 +80,10 @@
           @input="errors.price = ''"
         />
         <transition name="zoom-fade">
-          <p v-if="errors.price" class="mt-1 text-xs italic text-red-600">
+          <p
+            v-show="errors.price"
+            class="inline-block mt-1 text-xs italic text-red-600"
+          >
             {{ errors.price }}
           </p>
         </transition>
@@ -145,10 +157,12 @@ import { namespace } from 'vuex-class'
 import { ADD_ITEM } from '@/modules/home/store/action-types'
 import { Item } from 'vue-modules'
 import HomeFormCheckBox from '@/modules/home/components/HomeFormCheckBox.vue'
+import smoothReflow from 'vue-smooth-reflow'
 
 const home = namespace('home')
 @Component({
-  components: { HomeFormCheckBox }
+  components: { HomeFormCheckBox },
+  mixins: [smoothReflow]
 })
 export default class HomeForm extends Vue {
   /***************************
@@ -245,6 +259,15 @@ export default class HomeForm extends Vue {
   /********************************
    *  End: Form submission feature
    *******************************/
+
+  mounted() {
+    // Height transition feature
+    this.$smoothReflow({
+      el: this.$refs.wrapper!,
+      hideOverflow: false,
+      transition: 'height .25s ease-out'
+    })
+  }
 }
 </script>
 
