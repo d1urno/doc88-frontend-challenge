@@ -5,7 +5,7 @@ import { Store } from 'vuex'
 
 export class StoreModule implements VueModule {
   readonly name = 'store'
-  store?: Store<any>;
+  store?: Store<any>
   install(Vue: typeof _Vue) {
     Vue.use(Vuex)
     this.store = new Vuex.Store({

@@ -4,7 +4,7 @@ import Router from 'vue-router'
 
 export class RouterModule implements VueModule {
   readonly name = 'router'
-  router?: Router;
+  router?: Router
   install(Vue: typeof _Vue) {
     Vue.use(Router)
 
