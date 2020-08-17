@@ -8,7 +8,7 @@
     >
       <!-- prettier-ignore -->
       <h2
-        class="mb-5 text-xl italic font-bold text-red-800
+        class="mb-5 text-xl italic font-bold text-red-800 select-none
         md:text-2xl
         lg:pl-8 lg:mb-0"
       >
@@ -96,15 +96,16 @@
     <!-- TODO: Create drag and drop component -->
     <div class="z-10 px-5 mt-5">
       <div
-        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-md"
+        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-md cursor-pointer"
       >
         <img
           src="../assets/upload-icon.svg"
           alt=""
           aria-hidden="true"
+          draggable="false"
           class="w-12 mb-2"
         />
-        <p class="text-center text-red-800">
+        <p class="text-center text-red-800 select-none">
           Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar
           a pasta.
         </p>
@@ -118,8 +119,9 @@
       <input
         type="button"
         value="LIMPAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full cursor-pointer
         sm:mx-5 sm:inline
+        hover:scale-105 transition-transform transform duration-300 ease-out active:scale-100
         focus:outline-none focus:shadow-outline"
         @click="resetForm"
       />
@@ -127,8 +129,9 @@
       <input
         type="submit"
         value="CADASTRAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full
+        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full cursor-pointer
         sm:mx-5 sm:inline
+        hover:scale-105 transition-transform transform duration-300 ease-out active:scale-100
         focus:outline-none focus:shadow-outline"
       />
     </div>

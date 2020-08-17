@@ -752,7 +752,7 @@ module.exports = {
     gridRowEnd: ['responsive'],
     transform: ['responsive'],
     transformOrigin: ['responsive'],
-    scale: ['responsive', 'hover', 'focus'],
+    scale: ['responsive', 'hover', 'focus', 'active'],
     rotate: ['responsive', 'hover', 'focus'],
     translate: ['responsive', 'hover', 'focus'],
     skew: ['responsive', 'hover', 'focus'],
