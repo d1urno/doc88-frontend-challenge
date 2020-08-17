@@ -39,12 +39,13 @@
       </div>
       <!-- Parallax image --><!-- prettier-ignore -->
       <img
+        v-parallax="-0.2"
         src="../assets/pastel-parallax.png"
         alt="Pastel - Pastel de ideias"
         class="absolute inset-0 z-10 hidden
-        lg:block lg:-mt-12 lg:-ml-48 lg:max-w-md
-        xl:-ml-24
-        2xl:-mt-16 2xl:-ml-48 2xl:max-w-full"
+        lg:block lg:mt-6 lg:-ml-32 lg:max-w-xs
+        xl:-ml-12
+        2xl:-ml-32 2xl:max-w-full"
       />
       <!-- End: Parallax image -->
     </header>

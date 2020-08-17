@@ -4,6 +4,9 @@ import { StoreModule } from '@/modules/store'
 import { CoreModule } from '@/modules/core'
 import { HomeModule } from '@/modules/home'
 
+import VueParallaxJs from 'vue-parallax-js'
+Vue.use(VueParallaxJs)
+
 function bootstrap() {
   Vue.config.productionTip = false
   const routerModule = new RouterModule()
