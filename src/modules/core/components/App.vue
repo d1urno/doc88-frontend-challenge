@@ -23,7 +23,8 @@
    Remove highlight blue color on buttons
    when tapped, only for mobile devices
 *****************************************/
-label {
+label,
+input {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
