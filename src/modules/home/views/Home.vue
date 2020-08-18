@@ -1,5 +1,8 @@
 <template>
-  <main class="flex flex-col items-center justify-start min-h-screen">
+  <kinesis-container
+    tag="main"
+    class="relative flex flex-col items-center justify-start min-h-screen overflow-x-hidden"
+  >
     <span id="gradient" class="absolute inset-0" />
     <!-- Background red wave -->
     <img
@@ -38,15 +41,19 @@
         <!-- End: Absolute image -->
       </div>
       <!-- Parallax image --><!-- prettier-ignore -->
-      <img
-        v-parallax="-0.2"
-        src="../assets/pastel-parallax.png"
-        alt="Pastel - Pastel de ideias"
-        class="absolute inset-0 z-10 hidden
-        lg:block lg:mt-6 lg:-ml-32 lg:max-w-xs
-        xl:-ml-12
-        2xl:-ml-32 2xl:max-w-full"
-      />
+      <kinesis-element :strength="20" class="absolute inset-0 z-10 hidden
+      lg:block lg:mt-6 lg:-ml-32 lg:max-w-xs
+      xl:-ml-12
+      2xl:-ml-32 2xl:max-w-full">
+        <img
+          v-parallax="-0.2"
+          src="../assets/pastel-parallax.png"
+          alt="Pastel - Pastel de ideias"
+          class="lg:-ml-12
+          xl:-ml-6
+          2xl:ml-0"
+        />
+      </kinesis-element>
       <!-- End: Parallax image -->
     </header>
     <div class="container mb-24">
@@ -72,7 +79,7 @@
         <!-- End: List -->
       </div>
     </transition>
-  </main>
+  </kinesis-container>
 </template>
 
 <script lang="ts">
@@ -82,11 +89,12 @@ import { GET_ITEMS } from '@/modules/home/store/getters'
 import { Item } from 'vue-modules'
 import HomeForm from '@/modules/home/components/HomeForm.vue'
 import CardItem from '@/modules/home/components/CardItem.vue'
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 const home = namespace('home')
 
 @Component({
-  components: { CardItem, HomeForm }
+  components: { CardItem, HomeForm, KinesisContainer, KinesisElement }
 })
 export default class Home extends Vue {
   @home.Getter(GET_ITEMS) items!: [Item]

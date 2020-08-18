@@ -21,3 +21,8 @@ declare module 'vue-parallax-js' {
   const n: any
   export = n
 }
+
+declare module 'vue-kinesis' {
+  export const KinesisContainer: any
+  export const KinesisElement: any
+}
