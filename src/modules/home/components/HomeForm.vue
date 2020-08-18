@@ -133,7 +133,8 @@
         value="LIMPAR"
         class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-white bg-red-600 rounded-full cursor-pointer
         sm:mx-5 sm:inline
-        hover:scale-105 transition-transform transform duration-300 ease-out active:scale-100
+        transition-transform transform duration-300 ease-out active:scale-90
+        lg:hover:scale-105 lg:active:scale-100
         focus:outline-none focus:shadow-outline"
         @click="resetForm"
       />
@@ -143,7 +144,8 @@
         value="CADASTRAR"
         class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full cursor-pointer
         sm:mx-5 sm:inline
-        hover:scale-105 transition-transform transform duration-300 ease-out active:scale-100
+        transition-transform transform duration-300 ease-out active:scale-90
+        lg:hover:scale-105 lg:active:scale-100
         focus:outline-none focus:shadow-outline"
       />
     </div>
