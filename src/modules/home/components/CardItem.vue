@@ -4,7 +4,7 @@
     <img
       src="../assets/pasteis-placeholder-img.png"
       :alt="item.title + '- Pastel de ideias'"
-      class="relative z-10 mx-auto -mt-3 -mb-40
+      class="relative z-10 object-contain object-top w-64 h-64 mx-auto -mt-3 -mb-40
       lg:mb-auto lg:-ml-8 lg:-mr-2"
     />
     <div class="relative w-full rounded-lg shadow-xl lg:mb-auto lg:-ml-24">
