@@ -124,15 +124,20 @@
         @click="resetForm"
       />
       <!-- prettier-ignore -->
-      <input
+      <button
         type="submit"
-        value="CADASTRAR"
-        class="block w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full cursor-pointer
+        class="relative w-48 py-4 mx-auto mb-5 text-xl font-black text-red-800 bg-yellow-500 rounded-full
         sm:mx-5 sm:inline
         transition-transform transform duration-300 ease-out active:scale-90
         lg:hover:scale-105 lg:active:scale-100
         focus:outline-none focus:shadow-outline"
-      />
+        :class="{ 'pointer-events-none select-none': submitted }"
+      >
+        <transition name="slide-bottom">
+          <span :key="submitted" class="absolute inset-x-0">{{ !submitted ? 'CADASTRAR' : 'ADICIONADO!' }}</span>
+        </transition>
+        <br />
+      </button>
     </div>
     <!-- End: Buttons -->
   </form>
@@ -173,6 +178,7 @@ export default class HomeForm extends Vue {
     flavor: '',
     price: ''
   }
+  submitted: boolean = false
 
   submit(): void {
     // Trim white spaces
@@ -193,6 +199,12 @@ export default class HomeForm extends Vue {
 
     this.addItem({ ...this.item })
     this.resetForm()
+
+    // Show success message
+    this.submitted = true
+    setTimeout(() => {
+      this.submitted = false
+    }, 2000)
   }
 
   resetForm(): void {
@@ -306,6 +318,19 @@ input[type='number'] {
 }
 .zoom-fade-leave-active,
 .zoom-fade-enter-active {
+  @apply transition duration-500;
+  transition-timing-function: cubic-bezier(0.35, 0.46, 0.17, 1.3);
+}
+
+.slide-bottom-enter {
+  @apply transform -translate-y-full opacity-0;
+}
+.slide-bottom-leave-to {
+  @apply transform translate-y-full opacity-0;
+}
+
+.slide-bottom-leave-active,
+.slide-bottom-enter-active {
   @apply transition duration-500;
   transition-timing-function: cubic-bezier(0.35, 0.46, 0.17, 1.3);
 }
