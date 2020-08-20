@@ -179,12 +179,15 @@ export default class HomeForm extends Vue {
     this.item.title = this.item.title.trim()
     this.item.flavor = this.item.flavor.trim()
     this.item.description = this.item.description.trim()
+
+    // Format price
+    this.item.price = parseFloat(this.item.price).toFixed(2)
+
     if (!this.validateForm()) return
 
     // Save with unique id
     this.item.id = this.currentId++
-    // Remove leading zeros
-    this.item.price = this.item.price.replace(/^[0]+/g, '')
+
     // Replace dot for comma
     this.item.price = this.item.price.replace('.', ',')
 
