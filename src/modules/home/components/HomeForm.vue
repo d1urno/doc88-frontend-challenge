@@ -186,8 +186,9 @@ export default class HomeForm extends Vue {
     this.item.flavor = this.item.flavor.trim()
     this.item.description = this.item.description.trim()
 
-    // Format price
-    this.item.price = parseFloat(this.item.price).toFixed(2)
+    // Format price if filled
+    if (this.item.price)
+      this.item.price = parseFloat(this.item.price).toFixed(2)
 
     if (!this.validateForm()) return
 
