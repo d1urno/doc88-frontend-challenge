@@ -276,7 +276,7 @@ export default class HomeForm extends Vue {
 }
 </script>
 
-<style>
+<style scoped>
 .c-scroll-container {
   scroll-margin: 9rem;
   scroll-padding: 9rem;
