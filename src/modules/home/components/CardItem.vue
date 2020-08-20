@@ -3,11 +3,11 @@
     <!-- prettier-ignore -->
     <img
       src="../assets/pasteis-placeholder-img.png"
-      :alt="item.title + '- Pastel de ideias'"
-      class="relative z-10 object-contain object-top w-64 h-64 mx-auto -mt-3 -mb-40
-      lg:mb-auto lg:-ml-8 lg:-mr-2"
+      :alt="item.title + ' - Pastel de ideias'"
+      class="relative z-10 object-cover mx-auto -mb-32 shadow-xl rounded-md bg-white c-image
+      lg:mt-5 lg:mb-auto lg:-mr-2"
     />
-    <div class="relative w-full rounded-lg shadow-xl lg:mb-auto lg:-ml-24">
+    <div class="relative w-full rounded-lg shadow-xl lg:mb-auto lg:-ml-16">
       <!-- prettier-ignore -->
       <header
         class="px-8 pt-32 bg-red-600 rounded-t-lg
@@ -55,4 +55,9 @@ export default class CardItem extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.c-image {
+  height: 180px;
+  width: 180px;
+}
+</style>
