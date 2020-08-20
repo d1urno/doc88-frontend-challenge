@@ -11,12 +11,12 @@
       <!-- prettier-ignore -->
       <header
         class="px-8 pt-32 bg-red-600 rounded-t-lg
-        lg:items-center lg:justify-between lg:py-5 lg:pl-8 lg:pr-10 lg:flex"
+        lg:items-center lg:justify-between lg:py-3 lg:pl-8 lg:pr-10 lg:flex"
       >
         <h2
-          class="my-3 text-xl italic font-bold text-yellow-500 text-center
+          class="my-3 pt-2 text-xl italic font-bold text-yellow-500 text-center
           md:text-3xl
-          lg:my-0 lg:pl-20 lg:text-left"
+          lg:my-1 lg:pl-20 lg:text-left"
         >
           "{{ item.title }}"
         </h2>
@@ -28,8 +28,8 @@
           R${{ item.price }}
         </h2>
       </header>
-      <section class="px-8 py-6">
-        <p class="pb-4 text-xl text-red-800 md:text-2xl lg:pl-20">
+      <section class="px-8 py-8 -mt-1">
+        <p class="pb-3 text-xl text-red-800 md:text-2xl lg:pl-20">
           <span class="italic font-bold">Sabor: </span>
           {{ item.flavor }}
         </p>
