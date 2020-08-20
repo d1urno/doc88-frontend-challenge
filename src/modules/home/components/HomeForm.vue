@@ -105,23 +105,8 @@
     </div>
     <!-- End: Second row -->
     <!-- Third row -->
-    <!-- TODO: Create drag and drop component -->
     <div class="z-10 px-5 mt-5">
-      <div
-        class="flex flex-col items-center justify-center w-full p-5 border border-red-600 rounded-md cursor-pointer"
-      >
-        <img
-          src="../assets/upload-icon.svg"
-          alt=""
-          aria-hidden="true"
-          draggable="false"
-          class="w-12 h-12 mb-2"
-        />
-        <p class="text-center text-red-800 select-none">
-          Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar
-          a pasta.
-        </p>
-      </div>
+      <home-form-image-drop :image="item.image" @drop="handleDrop" />
     </div>
     <!-- End: Third row -->
     <!-- Buttons -->
@@ -159,11 +144,12 @@ import { namespace } from 'vuex-class'
 import { ADD_ITEM } from '@/modules/home/store/action-types'
 import { Item } from 'vue-modules'
 import HomeFormCheckBox from '@/modules/home/components/HomeFormCheckBox.vue'
+import HomeFormImageDrop from '@/modules/home/components/HomeFormImageDrop.vue'
 import smoothReflow, { Options } from 'vue-smooth-reflow'
 
 const home = namespace('home')
 @Component({
-  components: { HomeFormCheckBox },
+  components: { HomeFormImageDrop, HomeFormCheckBox },
   mixins: [smoothReflow]
 })
 export default class HomeForm extends Vue {
@@ -263,6 +249,16 @@ export default class HomeForm extends Vue {
   /********************************
    *  End: Form submission feature
    *******************************/
+
+  /*************************
+   *  Drag and Drop feature
+   *************************/
+  handleDrop(image: string) {
+    this.item.image = image
+  }
+  /******************************
+   *  End: Drag and Drop feature
+   *****************************/
 
   mounted() {
     // Height transition feature
