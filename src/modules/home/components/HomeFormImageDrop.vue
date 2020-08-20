@@ -97,7 +97,7 @@ export default class HomeFormImageDrop extends Vue {
   }
 
   createFile(file: File): void {
-    if (!file.type.match('image.(jpg|jpeg|png)', 'i')) {
+    if (!file.type.match(/image.(jpg|jpeg|png)/i)) {
       alert('A extensão deve ser JPG ou PNG')
       return
     }
