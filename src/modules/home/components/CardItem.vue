@@ -2,7 +2,7 @@
   <li class="relative max-w-4xl mx-auto mb-16 lg:flex 2xl:max-w-6xl c-item">
     <!-- prettier-ignore -->
     <img
-      src="../assets/pasteis-placeholder-img.png"
+      :src="item.image ? item.image : require('../assets/pasteis-placeholder-img.png')"
       :alt="item.title + ' - Pastel de ideias'"
       class="relative z-10 object-cover mx-auto -mb-32 shadow-xl rounded-md bg-white c-image
       lg:mt-5 lg:mb-auto lg:-mr-2"

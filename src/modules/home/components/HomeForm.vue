@@ -179,7 +179,8 @@ export default class HomeForm extends Vue {
     title: '',
     flavor: '',
     price: '',
-    description: ''
+    description: '',
+    image: ''
   }
   errors = {
     title: '',
@@ -208,6 +209,7 @@ export default class HomeForm extends Vue {
     this.item.flavor = ''
     this.item.price = ''
     this.item.description = ''
+    this.item.image = ''
 
     // Reset errors
     this.errors.title = ''

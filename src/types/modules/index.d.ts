@@ -14,6 +14,7 @@ declare module 'vue-modules' {
     flavor: string
     price: string
     description: string
+    image: string
   }
 }
 
