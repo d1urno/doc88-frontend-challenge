@@ -92,7 +92,7 @@ import { namespace } from 'vuex-class'
 import { GET_ITEMS } from '@/modules/home/store/getters'
 import { Item } from 'vue-modules'
 import HomeForm from '@/modules/home/components/HomeForm.vue'
-import CardItem from '@/modules/home/components/CardItem.vue'
+const CardItem = () => import('@/modules/home/components/CardItem.vue')
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 const home = namespace('home')
