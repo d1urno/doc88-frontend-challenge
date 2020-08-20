@@ -175,6 +175,10 @@ export default class HomeForm extends Vue {
   }
 
   submit(): void {
+    // Trim white spaces
+    this.item.title = this.item.title.trim()
+    this.item.flavor = this.item.flavor.trim()
+    this.item.description = this.item.description.trim()
     if (!this.validateForm()) return
 
     // Save with unique id
