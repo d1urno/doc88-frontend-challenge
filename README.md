@@ -1,4 +1,6 @@
-# doc88-pastel-test
+# doc88-frontend-challenge
+
+https://doc88-frontend-challenge.netlify.app/
 
 ## Project setup
 ```
@@ -15,20 +17,12 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
 ### Lints and fixes files
 ```
 yarn run lint
 ```
 
-### Run your unit tests
+### Run unit tests
 ```
 yarn run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
