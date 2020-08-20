@@ -30,14 +30,17 @@
         />
         <!-- End: Logo -->
         <!-- Absolute image --><!-- prettier-ignore -->
-        <img
-          src="../assets/pasteis-img.png"
-          alt="Pasteis - Pastel de ideias"
-          class="absolute bottom-0 left-0 right-0 w-40 mx-auto -mb-20
-          sm:-mb-24 sm:w-48
-          lg:left-auto lg:-mr-40 lg:-mb-32 lg:w-64
-          2xl:-mb-48 2xl:w-auto"
-        />
+        <picture>
+          <source srcset="../assets/pasteis-img.webp" type="image/webp" />
+          <img
+            src="../assets/pasteis-img.png"
+            alt="Pasteis - Pastel de ideias"
+            class="absolute bottom-0 left-0 right-0 w-40 mx-auto -mb-20
+            sm:-mb-24 sm:w-48
+            lg:left-auto lg:-mr-40 lg:-mb-32 lg:w-64
+            2xl:-mb-48 2xl:w-auto"
+          />
+        </picture>
         <!-- End: Absolute image -->
       </div>
       <!-- Parallax image --><!-- prettier-ignore -->
@@ -45,14 +48,17 @@
       lg:block lg:mt-6 lg:-ml-32 lg:max-w-xs
       xl:-ml-12
       2xl:-ml-32 2xl:max-w-full">
-        <img
-          v-parallax="-0.2"
-          src="../assets/pastel-parallax.png"
-          alt="Pastel - Pastel de ideias"
-          class="lg:-ml-12
-          xl:-ml-6
-          2xl:ml-0"
-        />
+        <picture>
+          <source srcset="../assets/pastel-parallax.webp" type="image/webp" />
+          <img
+            v-parallax="-0.2"
+            src="../assets/pastel-parallax.png"
+            alt="Pastel - Pastel de ideias"
+            class="lg:-ml-12
+            xl:-ml-6
+            2xl:ml-0"
+          />
+        </picture>
       </kinesis-element>
       <!-- End: Parallax image -->
     </header>
