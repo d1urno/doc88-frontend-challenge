@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 interface HTMLInputEvent extends Event {
   target: HTMLInputElement & EventTarget
@@ -76,19 +76,12 @@ export default class HomeFormImageDrop extends Vue {
    ************************/
   @Prop({ required: true }) private image!: string
 
-  file: string | ArrayBuffer = ''
-
-  @Watch('file')
-  onPropertyChanged(value: string) {
-    this.$emit('drop', value)
-  }
-
-  onDrop(e: DragEvent): void {
+  async onDrop(e: DragEvent) {
     e.stopPropagation()
     e.preventDefault()
 
     const files = e.dataTransfer!.files
-    this.createFile(files[0])
+    await this.createFile(files[0])
   }
 
   onChange(e: HTMLInputEvent): void {
@@ -96,22 +89,23 @@ export default class HomeFormImageDrop extends Vue {
     this.createFile(files![0])
   }
 
-  createFile(file: File): void {
+  async createFile(file: File) {
     if (!file.type.match(/image.(jpg|jpeg|png)/i)) {
-      alert('A extensão deve ser JPG ou PNG')
+      this.$emit('invalid-image')
       return
     }
     const reader: FileReader = new FileReader()
-    const vm = this
-
-    reader.onload = () => {
-      vm.file = reader.result!
-    }
-    reader.readAsDataURL(file)
+    return new Promise((resolve) => {
+      reader.onload = () => {
+        this.$emit('image-change', reader.result!)
+        resolve()
+      }
+      reader.readAsDataURL(file)
+    })
   }
 
   removeFile(): void {
-    this.file = ''
+    this.$emit('image-change', '')
   }
   /******************************
    *  End: Drag and Drop feature

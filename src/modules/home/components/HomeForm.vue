@@ -106,7 +106,11 @@
     <!-- End: Second row -->
     <!-- Third row -->
     <div class="z-10 px-5 mt-5">
-      <home-form-image-drop :image="item.image" @drop="handleDrop" />
+      <home-form-image-drop
+        :image="item.image"
+        @image-change="handleImageChange"
+        @invalid-image="handleInvalidImage"
+      />
     </div>
     <!-- End: Third row -->
     <!-- Buttons -->
@@ -281,8 +285,12 @@ export default class HomeForm extends Vue {
   /*************************
    *  Drag and Drop feature
    *************************/
-  handleDrop(image: string) {
+  handleImageChange(image: string) {
     this.item.image = image
+  }
+
+  handleInvalidImage() {
+    alert('A extensão deve ser JPG ou PNG')
   }
   /******************************
    *  End: Drag and Drop feature
