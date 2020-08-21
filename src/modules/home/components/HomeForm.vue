@@ -187,15 +187,6 @@ export default class HomeForm extends Vue {
   }
 
   submit(): void {
-    // Trim white spaces
-    this.item.title = this.item.title.trim()
-    this.item.flavor = this.item.flavor.trim()
-    this.item.description = this.item.description.trim()
-
-    // Format price if filled
-    if (this.item.price)
-      this.item.price = parseFloat(this.item.price).toFixed(2)
-
     if (!this.validateForm()) return
 
     // Save with unique id
@@ -230,6 +221,15 @@ export default class HomeForm extends Vue {
   }
 
   validateForm(): boolean {
+    // Trim white spaces
+    this.item.title = this.item.title.trim()
+    this.item.flavor = this.item.flavor.trim()
+    this.item.description = this.item.description.trim()
+
+    // Format price if filled
+    if (this.item.price)
+      this.item.price = parseFloat(this.item.price).toFixed(2)
+
     const req = 'Deve preencher este campo'
     const min = 'Mínimo 3 caracteres'
     const max = 'Máximo 60 caracteres'
