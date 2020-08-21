@@ -267,7 +267,9 @@ export default class HomeForm extends Vue {
       ]
       const element: HTMLElement = this.$refs[elementId] as HTMLElement
       element.focus({ preventScroll: true })
-      element.scrollIntoView({ behavior: 'smooth' })
+
+      // Added check to solve test error
+      if (element.scrollIntoView) element.scrollIntoView({ behavior: 'smooth' })
       return false
     }
     return true
