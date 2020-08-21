@@ -134,7 +134,9 @@
         :class="{ 'pointer-events-none select-none': submitted }"
       >
         <transition name="slide-bottom">
-          <span :key="submitted" class="absolute inset-x-0">{{ !submitted ? 'CADASTRAR' : 'ADICIONADO!' }}</span>
+          <span :key="submitted" class="absolute inset-x-0">
+            {{ _message }}
+          </span>
         </transition>
         <br />
       </button>
@@ -179,6 +181,10 @@ export default class HomeForm extends Vue {
     price: ''
   }
   submitted: boolean = false
+
+  get _message(): string {
+    return !this.submitted ? 'CADASTRAR' : 'ADICIONADO!'
+  }
 
   submit(): void {
     // Trim white spaces
